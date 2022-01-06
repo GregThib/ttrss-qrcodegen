@@ -21,7 +21,7 @@ class QrcodeGen extends Plugin {
 	}
 
 	function hook_article_button($line) {
-		return '<img src="plugins.local/qrcodegen/qrcode.png"
+		return '<img src="'.basename(dirname(__DIR__)).'/qrcodegen/qrcode.png"
 			class="tagsPic" style="cursor : pointer"
 			onclick="Plugins.QRcodeGen.send('.$line["id"].')"
 			title="'.__('Generate a QR Code').'" />';
